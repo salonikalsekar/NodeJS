@@ -1,24 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+var adminRoutes = require('./routes/admin')
+var shopRoutes = require('./routes/shop')
+const path = require('path');
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')))
+app.use('/admin',adminRoutes)
 
-app.use('/', (req, res, next) =>{
-    console.log("this always runs");
-    next();
+app.use('/', shopRoutes)
+
+app.use((req, res, next)=>{
+        res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+
 })
-app.use('/product', (req, res, next) =>{
-      res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>');
-})
-app.use('/add-product',(req, res, next) =>{
-    console.log(req.body);
-    res.redirect('/');
-})
-app.use('/', (req, res, next) =>{
-    res.send('<h1>hello</h1>');
-})
+
 // const server = http.createServer(app);
 // server.listen(3000);
 
