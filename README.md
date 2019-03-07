@@ -14,7 +14,7 @@ It also highlights the difference in the configuration/implementation of NodeJS 
 
 
 
-Installation:
+Installation Steps:
 
 1 -> npm install (this command will install all the packages used)
 2 -> npm start (this command will start the server)
