@@ -1,28 +1,23 @@
 {
-  "name": "nodejs",
+  "name": "nodejs-complete-guide",
   "version": "1.0.0",
-  "description": "Technologies Used:\r NODEJS\r ExpressJS\r MongoDB\r MySQL",
+  "description": "Complete Node.js Guide",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/salonikalsekar/NodeJS.git"
-  },
-  "author": "",
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/salonikalsekar/NodeJS/issues"
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   },
-  "homepage": "https://github.com/salonikalsekar/NodeJS#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "http": "0.0.0",
-    "nodemon": "^1.18.10",
-    "path": "^0.12.7"
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "pug": "^2.0.3"
   }
 }
