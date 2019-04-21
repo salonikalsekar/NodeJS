@@ -4,7 +4,10 @@ NODEJS
 ExpressJS
 MongoDB
 MySQL
-
+Sequilize
+REST api
+Async Await
+GraphQL
 
 NodeJS is a Javascript server side environment which helps in server side programming the business logic, Database connections configurations and also create APIs.
 It is good for real-time application development and for event-based server-side coding as well. 
